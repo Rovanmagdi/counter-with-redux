@@ -28,9 +28,8 @@ function App() {
   //   const action = { type: "decrease", payload: 4 };
   //   disptach(action);
   // };
-  const operater = useCallback( (type, payload) =>
-  {
-  disptach({type, payload});
+  const operater = useCallback((type, payload) => {
+    disptach({ type, payload });
 
   })
   const toggle = () => {
@@ -38,7 +37,7 @@ function App() {
     disptach(action);
 
   };
-  useEffect(() => {disptach({type: "increase",payload:  1} )}, [disptach])
+  useEffect(() => { disptach({ type: "increase", payload: 1 }) }, [disptach])
   return (
     <div>
       {!globalState.toggle ? (
@@ -56,6 +55,7 @@ function App() {
         </div>
       ) : (
         <div className="App">
+          <h1>Redux</h1>
           <button onClick={toggle}>show</button>
         </div>
       )}
