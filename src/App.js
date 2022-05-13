@@ -43,6 +43,7 @@ function App() {
     <div>
       {!globalState.toggle ? (
         <div className="App">
+          <h1>Redux</h1>
           <div className="counter">counter :{handlecounter(globalState.value)}</div>
           <button className="btn" onClick={() => operater('decrease', 4)}>
             decrease -
