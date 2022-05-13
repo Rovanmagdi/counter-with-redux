@@ -16,13 +16,14 @@ const counterReducer = createSlice({
       console.log("decrease");
       state.value = state.value - action.payload;
     },
+  },
     extraReducers: {
-      [toggleSwitchOff]: () => {
-        //    state.value=0;
-        console.log("gh");
+      [toggleSwitchOff]: (state,action) => {
+           state.value=0;
+        console.log("extraReducers");
       },
     },
-  },
+  
 });
 
 export default counterReducer.reducer;
